@@ -88,6 +88,7 @@ library(sf)
 library(dplyr)
 library(stplanr)
 library(leaflet)
+library(pbapply)
 ```
 
 
@@ -110,7 +111,6 @@ For now, let's see how the functions work.
 To get the centroids in Isle of Wight at the lower-resolution (smaller files) MSOA level (LSOA level data is returned by default or by replacing `msoa` with `lsoa` in the code below) you would run:
 
 ```{r}
-library(pct)
 wight_centroids = get_pct_centroids(region = "isle-of-wight", geography = "msoa")
 wight_zones = get_pct_zones(region = "isle-of-wight", geography = "msoa")
 ```
